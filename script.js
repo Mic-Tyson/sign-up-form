@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const element = formElements[i];
 
       if (element.tagName === 'INPUT' && element.hasAttribute('required') && !element.value.trim()) {
-        alert(`Please fill in the ${element.name} field.`);
         element.focus(); 
         event.preventDefault();
         return;
