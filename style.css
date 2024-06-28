@@ -2,6 +2,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -10,22 +11,28 @@ html, body {
 }
 
 .side-bar {
-  background-color: red;
+  background-color: #2C3E50;
   flex: 0.5;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  background-image: url('./images/halie-west-25xggax4bSA-unsplash.jpg'); 
+  background-size: cover; 
+  background-repeat: no-repeat;
+  
 }
 
 .header {
   background-color: rgba(0,0,0, 0.2);
   height: 10vh;
   width: 100%;
-  margin-top: 20vh;
+  margin-top: 30vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 3vh;
+  font-family: 'Lobster', cursive;
 }
 
 .header h1::before {
@@ -38,22 +45,150 @@ html, body {
 }
 
 .main {
-  background-color: blue;
+  background-color: #ECF0F1;
   display: flex;
+  justify-content: center;
   flex: 1;
   flex-direction: column;
 }
 
 .action-call {
-  background-color: gray;
-  flex: 0.3 
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-size: 16px; 
+  line-height: 1.6;
+  text-align: left;
+  font-weight: bold;
+}
+
+.action-call p {
+  margin-bottom: 10px; 
+  color: #333; 
+  max-width: 700px;
 }
 
 .form-container {
-  background-color: white;
+  background-color: #F6F7F8;
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  padding-right: 5vw;
+}
+
+.form-header {
+  margin-left: 10px;
+}
+
+.odin-form {
+  display: flex;
+  flex-wrap: wrap;
   flex: 0.4;
+  gap: 1vh;
+  margin-left: 10px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 40%;
+  margin-bottom: 20px;
+}
+
+.form-row input[type='text'],
+.form-row input[type='email'],
+.form-row input[type='tel'],
+.form-row input[type='password'] {
+  appearance: none;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  border: 1px solid #BDC3C7;
+  border-radius: 3px;
+  font-size: 14px;
+  height: 2em;
+}
+
+.form-row input[type='text']:focus,
+.form-row input[type='email']:focus,
+.form-row input[type='tel']:focus,
+.form-row input[type='password']:focus {
+  border-color: blue;
+  outline: none;
+}
+
+
+
+@media (max-width: 650px) {
+  .form-row input[type='text'],
+  .form-row input[type='email'],
+  .form-row input[type='tel'],
+  .form-row input[type='password'],
+  .form-row {
+      width: 90%; 
+      margin-right: 10px;
+  }
 }
 
 .submit-container {
-  flex: 0.1;
+  flex: 0.14;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
 }
+
+.submit-container button {
+  padding: 10px 20px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #596D48;
+  color: white;
+  border-radius: 6px;
+}
+
+.submit-container button:hover {
+  cursor: grab;
+  background-color: #6a8850;
+}
+
+a {
+  color: #2980B9;
+  text-decoration: none;
+}
+
+.submit-container button:hover {
+  box-shadow: 0 0 5px black;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='tel']:focus,
+input[type='password']:focus {
+  border-color: blue;
+  box-shadow: 0 0 5px black;
+}
+
+input[type='text']:invalid,
+input[type='email']:invalid,
+input[type='tel']:invalid,
+input[type='password']:invalid {
+  border-color: red;
+}
+
+.pw-match {
+  display: none;
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.pw-match.show {
+  display: block;
+}
+
