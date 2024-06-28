@@ -18,20 +18,72 @@
         <h1>Odin</h1>
       </div>
       <div class="footer">
-        <p>Photo by x</p>
+        <p>Photo by <a href="https://unsplash.com/@haliewestphoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Halie West</a> on <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></p>
       </div>
     </div>
 
     <div class="main">
+
       <div class="action-call">
-        <p>This is not real. You know you want to</p>
+        <p>This is not a real online service!.
+           You know you need something like this in
+            your life to help you realise your
+          deepest dreams. Sign up <em>now</em> to get started</p>
+          <p>You <em>know</em> you want to.</p>
       </div>
+
       <div class="form-container">
-        <form action="">
-          
+        <h2 class="form-header">Let's do this!</h2>
+
+        <form id="odin-form" method="post" class="odin-form">
+          <div class="form-row">
+            <label for="f-name">First Name</label>
+            <input  type="text" 
+                    id="f-name" 
+                    name="f-name" 
+                    required>
+          </div>
+          <div class="form-row">
+            <label for="l-name">Last Name</label>
+            <input  type="text" 
+                    id="l-name" 
+                    name="l-name">
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input  type="email" 
+                    id="email" 
+                    name="email"
+                    required>
+          </div>
+          <div class="form-row">
+            <label for="tel">Phone number</label>
+            <input  type="tel" 
+                    id="tel" 
+                    name="tel"
+                    required>
+          </div>
+          <div class="form-row">
+            <label for="password">Password</label>
+            <input  type="password" 
+                    id="password" 
+                    name="password"
+                    required>
+          </div>
+          <div class="form-row">
+            <label for="confirm-password">Confirm Password</label>
+            <input  type="password" 
+                    id="confirm-password" 
+                    name="confirm-password"
+                    required>
+            <span class="pw-match"id="pw-match">Passwords do not match</span>
+          </div>
         </form>
-      </div>
+    </div>
+
       <div class="submit-container">
+        <button type="submit" form="odin-form" id="submit-button">Create Account</button>
+        <p>Already have an account? <a href="url">Log in</a></p>
       </div>
     </div>
 
